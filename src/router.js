@@ -5,20 +5,22 @@ import PageTwo from './components/PageTwo.vue'
 
 export const routes = [
   {
-    path: '/',
-    redirect: { path: '/home' }
+    path: '/console/',
+    redirect: { name: 'home' }
   },
   {
-    path: '/page2',
+    path: '/console/home',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/console/page2',
+    name: 'page2',
     component: PageTwo
   },
   {
     path: '/:catchAll(.*)',
     component: NotFound
-  },
-  {
-    path: '/home',
-    component: Home
   }
 ];
 
